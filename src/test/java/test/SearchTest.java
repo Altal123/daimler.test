@@ -23,7 +23,6 @@ public class SearchTest extends BaseTest {
         searchPage.openUrl();
         searchPage.checkTitle(Config.TITLE);
         find(searchPage.searchField).sendKeys("Miracle");
-        dumbWait(5);
         searchPage.searchButton.click();
 //        clickActionsBuilder(searchPage.searchButton); //is not acceptable. Why?
 //        find(searchPage.searchButton).click();        //is not acceptable. Why?
@@ -45,7 +44,6 @@ public class SearchTest extends BaseTest {
         SearchPage searchPage = new SearchPage(driver);
         searchPage.openUrl();
         searchPage.checkTitle(Config.TITLE);
-        dumbWait(5);
         find(searchPage.searchButton).click();
         searchPage.checkTitle(Config.TITLE);
     }
