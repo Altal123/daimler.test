@@ -14,13 +14,21 @@ public class BasePage {
         this.driver = driver;
     }
 
-  public void openUrl(){
-        driver.get(Config.URL);
+  public void openUrl(String url){
+        driver.get(url);
   }
 
   public void checkTitle(String title){
       new WebDriverWait(driver, 4).until(ExpectedConditions.titleContains(title));
   }
+
+    protected void dumbWait (int seconds){
+        try {
+            Thread.sleep(seconds * 1000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+    }
 
 
 }

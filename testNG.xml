@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!-- XML который запускает тесты сразу в не скольких потоках-->
+<suite name="ParallelTestSuite" verbose="1" parallel="tests" thread-count="3">
+
+    <test name="First" >
+        <parameter name="browserName" value="Firefox"/>
+        	<classes>
+            	<class name="test.SearchTest"> </class>
+				<class name="test.UkrNetTest"> </class>
+        	</classes>
+    </test>
+	<!--<test name="Second" >
+		<parameter name="browserName" value="Firefox"/>
+		<classes>
+			<class name="test.UkrNetTest"> </class>
+		</classes>
+	</test>-->
+</suite>
